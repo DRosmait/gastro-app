@@ -20,3 +20,31 @@
 .App-link {
   color: #09d3ac;
 }
+
+.nx-table-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.nx-table-item {
+    background-color: green;
+    border: 1px solid #000;
+    cursor: pointer;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.nx-table-item--ordered {
+    background-color: red;
+}
+
+.nx-table-itme__title {
+    text-align: center;
+}
