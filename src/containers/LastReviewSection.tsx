@@ -5,8 +5,8 @@ import { AppState } from '../store';
 import { removeReview } from '../store/reviews/actions';
 import LastReview from '../components/LastReview';
 
-const mapStateToProps = (state: AppState) => ({
-    reviews: state.reviews,
+const mapStateToProps = ({ reviews }: AppState) => ({
+    reviews,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({

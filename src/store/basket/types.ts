@@ -1,15 +1,12 @@
-interface MenuItem {
+import { DishProps } from '../../components/Dish';
+
+interface BaskteItem {
     id: number;
-    name: string;
-    descriotion: string;
+    menuItem: DishProps;
+    amount: number;
 }
 
-export interface BasketState {
-    [index: number]: {
-        menuItem: MenuItem;
-        amount: number;
-    }
-};
+export type BasketState = BaskteItem[];
 
 export const BASKET_ADD = 'BASKET_ADD';
 export const BASKET_REMOVE = 'BASKET_REMOVE';

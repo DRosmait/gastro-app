@@ -1,5 +1,5 @@
 import { REVIEW_ADD, REVIEW_REMOVE, REVIEW_EDIT, ReviewActionTypes } from './types';
-import { Review } from '../../components/Review';
+import { Review } from '../../components/ReviewItem';
 
 export function addReview(newReview: Review): ReviewActionTypes {
     return {

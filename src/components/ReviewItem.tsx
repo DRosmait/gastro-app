@@ -1,24 +1,19 @@
 import React from 'react';
 
-export interface Product {
-    id: number;
-    name: string;
-    price: number;
-}
+import { DishProps } from './Dish';
 
 export interface Review {
-    product: Product;
+    product: DishProps;
     userName: string;
     reviewText: string;
     date: number;
+}
+
+interface ReviewItemProps extends Review {
     modifier?: string;
 }
 
-interface ReviewItemProps {
-    review: Review;
-}
-
-const ReviewItem: React.FC<ReviewItemProps> = ({ review: { product, userName, reviewText, date, modifier }}) => {
+const ReviewItem: React.FC<ReviewItemProps> = ({ product, userName, reviewText, date, modifier }) => {
     return <li className={`nx-review ${modifier}`}>
         <div className="nx-review__inner">
             <div className="nx-review__product nx-product">
