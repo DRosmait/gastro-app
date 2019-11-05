@@ -2,11 +2,11 @@ import React, { useState, FormEvent } from 'react';
 import { History } from 'history';
 
 import { Review } from './ReviewItem';
-import { DishProps } from './Dish';
+import { DishInfoProps } from './DishInfo';
 
 export interface ReviewFormProps {
     addReview: (newReview: Review) => void;
-    dish: DishProps;
+    dish: DishInfoProps;
     history: History;
 }
 

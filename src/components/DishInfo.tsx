@@ -1,7 +1,13 @@
 import React from 'react';
-import { DishProps } from './Dish';
 
-const DishInfo: React.FC<DishProps> = ({ id, name, price, description }) => {
+export interface DishInfoProps {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+}
+
+const DishInfo: React.FC<DishInfoProps> = ({ id, name, price, description }) => {
     return (
         <div className="nx-dish__info" key={id}>
             <div className="nx-dish__name">{name}</div>

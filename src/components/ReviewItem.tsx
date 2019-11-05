@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { DishProps } from './Dish';
+import { DishInfoProps } from './DishInfo';
 
 export interface Review {
-    product: DishProps;
+    product: DishInfoProps;
     userName: string;
     reviewText: string;
     date: number;
@@ -22,7 +22,7 @@ const ReviewItem: React.FC<ReviewItemProps> = ({ product, userName, reviewText, 
             </div>
             <div className="nx-review__user-section">
                 <div className="nx-review__username">{userName}</div>
-                <div className="nx-review__date">{date}</div>
+                <div className="nx-review__date">{ new Date(date).toLocaleString() }</div>
                 <div className="nx-review__text">{reviewText}</div>
             </div>
         </div>

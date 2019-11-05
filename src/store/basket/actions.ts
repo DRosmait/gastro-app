@@ -1,13 +1,16 @@
 import {
     BASKET_ADD,
     BASKET_REMOVE,
+    BASKET_REDUCE,
     BasketActionTypes,
 } from './types';
 
-export function addToBasket(id: number): BasketActionTypes {
+import { BaskteItem } from '../../components/BasketListItem';
+
+export function addToBasket(payload: BaskteItem): BasketActionTypes {
     return {
         type: BASKET_ADD,
-        id,
+        payload,
     };
 };
 
@@ -17,3 +20,10 @@ export function removeFromBasket(id: number): BasketActionTypes {
         id,
     };
 };
+
+export function reduceInBasket(id: number): BasketActionTypes {
+    return {
+        type: BASKET_REDUCE,
+        id,
+    }
+}

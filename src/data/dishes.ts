@@ -1,6 +1,6 @@
-import { DishProps } from '../components/Dish';
+import { DishInfoProps } from '../components/DishInfo';
 
-const dishes: DishProps[] = [
+const dishes: DishInfoProps[] = [
     {
         id: 0,
         name: 'Burger Pane',

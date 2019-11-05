@@ -6,14 +6,14 @@ import { RouteComponentProps } from 'react-router-dom';
 
 import { AppState } from '../store';
 import { addReview } from '../store/reviews/actions';
-import { DishProps } from '../components/Dish';
+import { DishInfoProps } from '../components/DishInfo';
 import { Review } from '../components/ReviewItem';
 import DishInfo from '../components/DishInfo';
 import ReviewForm from '../components/ReviewForm';
 
 interface ReviewsPageProps extends RouteComponentProps<{id?: string}> {
     // match: match<{id?: string}>;
-    dish?: DishProps;
+    dish?: DishInfoProps;
     addReview: (newReview: Review) => void;
 }
 
